@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a class="person" href="#" data-name="John Doe" data-age="12">One</a></li>
+        <li><a class="person" href="#" data-name="Mark Z" data-age="23">Two</a></li>
+    </ul>
+
+    <div class="result">
+        <p>Name: <span class="result-name"></span></p>
+        <p>Age: <span class="result-age"></p>
+    </div>
+</body>
+<script>
+    var $person = $('.person');
+    var $resultName = $('.result-name');
+    var $resultAge = $('.result-age');
+
+    $person.on('click', function () {
+        var $this = $(this);
+
+        var name = $this.data('name');
+        var age = $this.data('age');
+
+        $resultName.html(name);
+        $resultAge.html(age);
+    });
+</script>
+
+</html>
