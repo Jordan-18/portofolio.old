@@ -12400,3 +12400,11 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+@media screen and (max-width: 680px) {
+  .tools {
+    display: none;
+    transform: rotate();
+    transition: 1s;
+  }
+}
